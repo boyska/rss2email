@@ -390,6 +390,7 @@ class Feed (object):
                         message=message)
                     if not message:
                         continue
+                processed = processed[:3] + (message,)
                 yield processed
 
     def _check_for_errors(self, parsed):
